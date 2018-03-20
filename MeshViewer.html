@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html style="overflow:hidden;">
+
+<head>
+
+<title>Online .mesh viewer</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+
+<link rel="stylesheet" href="MeshViewer.css" type="text/css">
+<link rel="stylesheet" href="bulma.min.css" type="text/css">
+
+<script defer src="font-awesome-5.0.8.min.js"></script>
+<script defer src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../dist/b4w.js"></script>
+<script type="text/javascript" src="MeshViewer.js"></script>
+
+</head>
+
+<body>
+
+  <div id="main_canvas_container"></div>
+
+  <div id="topButtons">
+    <div id="meshInput" class="file is-danger is-small" style="display:inline-block;">
+      <label class="file-label">
+        <input id="fileinput" class="file-input" type="file" accept=".mesh">
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label">
+            .mesh file
+          </span>
+          </span>
+      </label>
+    </div>
+    <div id="solInput" class="file is-info is-small" style="display:inline-block;">
+      <label class="file-label">
+        <input id="solinput" class="file-input" type="file" accept=".sol">
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label">
+            .sol file
+          </span>
+        </span>
+      </label>
+    </div>
+  </div>
+
+	<div id="footer">
+		<a id="toggleInfo" class="button is-light is-outlined is-small">Info</a>
+		<a id="toggleColor" class="button is-light is-outlined is-small">Toggle Scalars</a>
+		<a id="www" class="button is-light is-outlined is-small">www.</a>
+    <a id="normals" class="button is-light is-outlined is-small">Invert Normals</a>
+	</div>
+
+	<div id="modal" class="modal">
+	  <div class="modal-background"></div>
+	  <div class="modal-card">
+	    <header class="modal-card-head">
+	      <p class="modal-card-title">Online .mesh viewer</p>
+	      <button class="delete" aria-label="close"></button>
+	    </header>
+	    <section class="modal-card-body">
+				<div id="meshInfo">No .mesh file is loaded for the time being...</div>
+				<div id="solInfo"></div>
+	    </section>
+	    <footer class="modal-card-foot">
+	      <p>Made with <i><a href="https://www.blend4web.com/en/" target="_blank">Blend4Web</a></i> at the <a href="http://iscd.upmc.fr" target="_blank">ISCD</a></p>
+	    </footer>
+	  </div>
+	</div>
+
+	<div id="inriaModal" class="modal">
+	  <div class="modal-background"></div>
+	  <div class="modal-card">
+	    <header class="modal-card-head">
+	      <p class="modal-card-title">Load a .mesh file from the web</p>
+	      <button class="delete" aria-label="close"></button>
+	    </header>
+	    <section class="modal-card-body">
+				<div class="field">
+				  <p class="control"><input class="input" type="url" value="https://www.rocq.inria.fr/gamma/gamma/download/counter.php?dir=ANIMALS/&get_obj=139camel-animal.mesh"></p>
+				</div>
+	    </section>
+	    <footer class="modal-card-foot" style="justify-content: space-between;">
+	      <p>Select a .mesh link from <a href="https://www.rocq.inria.fr/gamma/gamma/download/download.php" target="_blank">INRIA 3D repository</a></p>
+				<a id="go" class="button is-success">OK!</a>
+			</footer>
+	  </div>
+	</div>
+
+  <div id="loadingScreen">
+    <div id="rideau"></div>
+    <img src="logoISCD.png"></img>
+    <p id="clickSomewhere">Click anywhere to start the app</p>
+  </div>
+
+
+</body>
+
+</html>

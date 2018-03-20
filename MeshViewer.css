@@ -1,0 +1,67 @@
+*:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    tap-highlight-color: rgba(0,0,0,0);
+}
+html{
+  background-color: black !important;
+}
+body {
+  background-color: #000;
+  margin: 0;
+  overflow: hidden;
+}
+
+#main_canvas_container {
+  background-color:black;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition:0.5s;
+}
+
+
+#topButtons{
+  margin:10px;
+}
+#footer{
+  position: absolute;
+  bottom:0px;
+  margin:10px;
+}
+
+#loadingScreen{
+  width:100%;
+  height:100%;
+  background-color:black;
+  z-index:999;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+#loadingScreen img{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+#loadingScreen #rideau, #loadingScreen img{
+  transform: translate( calc( 50vw - 50% ) , calc( 50vh - 50% ) );
+}
+
+#rideau{
+  width:517px;
+  height:121px;
+  background-color:#000;
+  opacity:0.9;
+  position:absolute;
+  z-index:999;
+}
+
+#clickSomewhere{
+  color:#aaa;
+  position:absolute;
+  transform: translate( calc( 50vw - 50% ) , calc( 0vh - 50% ) );
+  opacity:0;
+  transition:2s;
+}
