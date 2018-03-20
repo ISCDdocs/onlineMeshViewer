@@ -1,5 +1,5 @@
 # online .mesh viewer
-Visualisation de fichiers .mesh en ligne avec Blend4Web
+Visualisation de fichiers .mesh en ligne avec Blend4Web. L'application est visible sur le site [iscd.upmc.fr](http://iscd.upmc.fr/medit)
 
 ![Screenshot](screenshot.png)
 
